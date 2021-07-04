@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon/favicon6.png" type="image/x-icon">
+    <link rel="stylesheet" href="./other.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+
+    <title>TO-DO</title>
+</head>
+<body>
+    <header>
+        <p class="title"><i class="fas fa-check-circle" ></i> ToDo <sub style="font-size: 0.7rem;font-style: italic;"> by Sagar</sub></p>
+        
+        <div class="menus"><button class="menubtn" onclick="addTask()">Tasks</button> <button class="menubtn" onclick="window.location = './completedTasks.html'">Completed</button> <button class="menubtn" onclick="window.location = './Backup.html'">Backup</button> <button class="menubtn">Other</button></div>
+        
+        <div class="bar" onclick="popupmenu()">
+            <button class="menubtn-bar">
+                <i id="changeclas" class="fas fa-bars" style="font-size: 1.3rem;"></i>
+            </button>
+        </div>
+        
+    </header>
+    <div class="menuitems">
+        <button class="btnn" onclick="window.location = '.'">Tasks</button>
+        <button class="btnn" onclick="window.location = './completedTasks.html'">Completed</button>
+        <button class="btnn" onclick="handleclick('#about')">Other</button>
+    </div>
+    <div class="nextoverlay" onclick="popupmenu()"></div>
+
+    <div style="width: 100vw; height: 3rem; display: flex; justify-content: center; align-items: center;">
+        <span style="color: rgb(209, 0, 80); font-size: 1.3rem; font-weight: bold; font-style: oblique;">Other Settings</span>
+    </div>
+
+    <div class="setting1">
+        <div class="setName">Light Mode</div>
+        <div class="setIcon" onclick="changeTheme()"><i class="fas fa-toggle-off"></i></div>
+    </div>
+
+    <div class="setting1">
+        <div class="setName">Delete All</div>
+        <div class="setIcon" onclick="deleteAll()"><i class="fas fa-trash"></i></div>
+    </div>
+
+    <div class="setting1">
+        <div class="setName">Cancel Notifications</div>
+        <div class="setIcon" onclick="deleteNotif()"><i class="far fa-bell-slash"></i></div>
+        
+    </div>
+
+    <div class="setting1">
+        <div class="setName">Set Notification Time</div>
+        <div class="setIcon" onclick="openTime()"><i class="far fa-clock"></i></div>
+    </div>
+    <button class="ShowNot" onclick="showAll()"> Show Notification Table </button>
+    <input type="time" id="timeOfNotf" onchange="timesetter()">
+
+
+    <script src="./js/other.js"></script>
+</body>
+</html>

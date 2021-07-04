@@ -1,0 +1,58 @@
+@import "./style.css";
+
+.setting1{
+    width: 97vw;
+    height: 4rem;
+    background-color: rgb(173, 173, 173);
+    color: black;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+#timeOfNotf{
+    visibility: visible;
+}
+
+.setName{
+    margin-left: 1rem;
+    font-weight: bold;
+}
+.setIcon{
+    font-size: 1.7rem;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.setIcon:active{
+    background-color: rgb(119, 119, 119);
+}
+
+.ShowNot{
+    padding: 0.7rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+.ShowNot:active{
+    background-color: rgb(1, 180, 180);
+}
+
+@media screen and (max-width:930px){
+    #timeOfNotf{
+        visibility: hidden;
+    }
+}

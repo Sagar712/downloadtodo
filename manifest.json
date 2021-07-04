@@ -1,0 +1,17 @@
+{
+    "name":"TODO",
+    "short_name":"todo",
+    "start_url":".",
+    "background_color":"rgb(172, 40, 0)",
+    "theme_color":"rgb(255, 81, 0)",
+    "display":"standalone",
+    "icons":[
+        {
+            "src":"./favicon/favicon6.png",
+            "sizes":"512x512",
+            "type":"image/png"
+        }
+        
+    ]
+
+}

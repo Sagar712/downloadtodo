@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon/favicon6.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+
+    <title>TO-DO(Completed)</title>
+</head>
+<body>
+    <header>
+        <p class="title"><i class="fas fa-check-circle" ></i> ToDo <sub style="font-size: 0.7rem;font-style: italic;"> by Sagar</sub></p>
+        
+        <div class="menus"><button class="menubtn" onclick="addTask()">Tasks</button> <button class="menubtn">Completed</button> <button class="menubtn" onclick="window.location = './Backup.html'">Backup</button> <button class="menubtn" onclick="window.location = './other.html'">Other</button></div>
+        
+        <div class="bar" onclick="popupmenu()">
+            <button class="menubtn-bar">
+                <i id="changeclas" class="fas fa-bars" style="font-size: 1.3rem;"></i>
+            </button>
+        </div>
+    </header>
+    <div class="menuitems">
+        <button class="btnn" onclick="window.location = './Backup.html'">Backup</button>
+        <button class="btnn" onclick="window.location = './other.html'">Other</button>
+        <button class="btnn" onclick="handleclick('#about')">About</button>
+    </div>
+    <div class="nextoverlay" onclick="popupmenu()"></div>
+
+    <div style="width: 100vw; height: 3rem; display: flex; justify-content: center; align-items: center;">
+        <span style="color: rgb(209, 0, 80); font-size: 1.3rem; font-weight: bold; font-style: oblique;">Completed tasks</span>
+    </div>
+    <div id="AllTasks2">
+        
+    </div>
+    
+
+    <div class="popupTask">
+        <div class="closebutn" onclick="togglePopup('popupTask')"><i class="fas fa-times"></i></div>
+        <div style="height: 11rem; display: flex; justify-content: center; align-items: flex-end;"> 
+            <p style="color: rgb(228, 228, 228); font-size: 1.3rem;margin-bottom: 4rem; font-weight: bold;">Want to Undo?</p>
+        </div>
+        <div class="finalbtns">
+            <button style="background-color: rgb(42, 141, 255);" onclick="undoTask()">Undo</button>
+            <button style="background-color: rgb(182, 59, 59);" onclick="deleteTask()">Delete</button>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="adjuster"></div>
+    <footer> 
+        <div class="op1" onclick="addTask()">Tasks</div> 
+        <div style="height: 100%; width: 2px; background-color: black;"></div>
+        <div class="op1"> Completed</div>
+    </footer>
+
+
+    <script src="./js/completedTask.js"></script>
+</body>
+</html>

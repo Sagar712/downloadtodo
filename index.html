@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon/favicon6.png" type="image/x-icon">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>TO-DO</title>
+</head>
+<body>
+    <div class="updateAvailable"> <span class="FireUpdate" onclick="fireUpdate()"> Click to install update  </span> 
+        <span class="closebtnH"><i class="fas fa-times"></i></span> </div>
+    <header>
+        <p class="title"><i class="fas fa-check-circle" ></i> ToDo <sub style="font-size: 0.7rem;font-style: italic;"> by Sagar</sub></p>
+        
+        <div class="menus"><button class="menubtn" onclick="togglePopup('popupTask')">Add +</button> <button class="menubtn" onclick="window.location = './completedTasks.html'">Completed</button> <button class="menubtn" onclick="window.location = './Backup.html'">Backup</button> <button class="menubtn" onclick="window.location = './other.html'">Other</button></div>
+        
+        <div class="bar" onclick="popupmenu()">
+            <button class="menubtn-bar">
+                <i id="changeclas" class="fas fa-bars" style="font-size: 1.3rem;"></i>
+            </button>
+        </div>
+        
+    </header>
+    <div class="menuitems">
+        <button class="btnn" onclick="window.location = './Backup.html'">Backup</button>
+        <button class="btnn" onclick="window.location = './other.html'">Other</button>
+        <button class="btnn" onclick="handleclick('#about')">About</button>
+    </div>
+    <div class="nextoverlay" onclick="popupmenu()"></div>
+    <div id="AllTasks">
+            
+            <div style="
+                width: 100vw; 
+                height: auto; 
+                display: flex; 
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+                margin-top: 30vh;">
+
+
+                <button class="addButton" onclick="togglePopup('popupTask')">
+                    
+                    <span style=" font-size: 1.4rem; font-style: oblique;margin: 0;"><i class="fas fa-plus"></i><br>Add new task</span></button>
+                
+            </div>
+        
+    </div>
+    
+
+    <div class="popupTask">
+        <div class="closebutn" onclick="togglePopup('popupTask')"><i class="fas fa-times"></i></div>
+        <div class="taskTitle"> <input type="text" id="title" placeholder=" Write Task..."> </div>
+        <div class="statusbox"> 
+            <p>Priority:</p> 
+            <button onclick="clickStatus('normal')">Normal</button> 
+            <button onclick="clickStatus('important')">Important</button> 
+        </div>
+        <div class="description"> <textarea  id="description" rows="5" placeholder=" Task Description...."></textarea> </div>
+        <div class="finalbtns">
+            <button style="background-color: rgb(15, 209, 151);" onclick="saveTask()">Save</button>
+            <button style="background-color: rgb(182, 59, 59);" onclick="togglePopup('popupTask')">Cancel</button>
+        </div>
+    </div>
+
+    <div class="editTask">
+        <div class="closebutn" onclick="togglePopup('editTask')"><i class="fas fa-times"></i></div>
+        <div class="taskTitle"> <input type="text" id="title2" placeholder=" Write Task..."> </div>
+        <div class="statusbox"> 
+            <p>Priority:</p> 
+            <button onclick="clickStatus('normal')">Normal</button> 
+            <button onclick="clickStatus('important')">Important</button> 
+        </div>
+        <div class="description"> <textarea  id="description2" rows="5" placeholder=" Task Description...."></textarea> </div>
+        <div class="finalbtns">
+            <button style="background-color: rgb(15, 209, 151);" onclick="saveCurrentTask()">Save</button>
+
+            <button style="background-color: rgb(255, 217, 0);" onclick="completeTask2()">Mark as Complete</button>
+
+            <button style="background-color: rgb(182, 59, 59);" onclick="deleteTask()">Delete</button>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="adjuster"></div>
+    <footer> 
+        <div class="op1" onclick="togglePopup('popupTask')">Add task</div> 
+        <div style="height: 100%; width: 2px; background-color: black;"></div>
+        <div class="op1" onclick="CompltedTasks()"> Completed</div>
+    </footer>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
